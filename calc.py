@@ -144,7 +144,7 @@ class Guadrate(Rectangle):
         self.side_length_4 = side_length
 
 
-class Rhombus(Figure):
+class Rhombus(Rectangle):
     """
     Класс ромба
     """
@@ -152,14 +152,23 @@ class Rhombus(Figure):
         FigureEnum.RHOMBUS
     )
 
+    def __init__(self, side_length: int):
+        self.side_length_1 = side_length
+        self.side_length_2 = side_length
+        self.side_length_3 = side_length
+        self.side_length_4 = side_length
 
-class Sphere(Figure):
+
+class Sphere(Сircle):
     """
     Класс сферы
     """
     title = FigureEnum.VALUES.get(
         FigureEnum.SPHERE
     )
+
+    def __init__(self, radius):
+        self.radius = radius
 
 
 class Cube(Figure):
